@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>User Management</title>
+  </head>
+  <body>
+    <h2>Create User</h2>
+    <form id="userForm">
+      <input type="text" id="name" placeholder="Enter Name" required />
+      <button type="submit">Create</button>
+    </form>
+    <ul id="userList"></ul>
+    <script>
+      document
+        .getElementById("userForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          let name = document.getElementById("name").value;
+          let response = await fetch("/api/users", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id: Date.now(), name }),
+          });
+          let data = await response.json();
+          alert(data.message);
+          location.reload();
+        });
+      async function fetchUsers() {
+        let response = await fetch("/api/users");
+        let users = await response.json();
+        document.getElementById("userList").innerHTML = users
+          .map((u) => `<li>${u.name}</li>`)
+          .join("");
+      }
+      fetchUsers();
+    </script>
+  </body>
+</html>
