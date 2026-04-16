@@ -1,10 +1,14 @@
 @font-face {
-  font-family: "Lora-i";
-  src: url(../assets/fonts/Lora/Lora-Italic-VariableFont_wght.ttf);
+  font-family: "Arvo";
+  src: url(../assets/fonts/Arvo/Arvo-Regular.ttf);
 }
 @font-face {
-  font-family: "PressStart2P";
-  src: url(../assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+  font-family: "Lora-i";
+  src: url(../assets/fonts/Lora/Lora-Italic.ttf);
+}
+@font-face {
+  font-family: "BitcountGridDouble";
+  src: url(../assets/fonts/Bitcount_Grid_Double/BitcountGridDouble-VariableFont_CRSV\,ELSH\,ELXP\,slnt\,wght.ttf);
 }
 * {
   padding: 0;
@@ -14,33 +18,58 @@
 
 body {
   background-color: #ffc0cb;
-}
-
-body h2 {
-  font-family: "PressStart2P", sans-serif;
-  color: blueviolet;
-  font-size: 30px;
-  margin-top: 2em;
-  text-align: center;
-}
-body form {
-  margin-top: 2em;
-  display: flex;
-  justify-content: center;
+  h2 {
+    font-family: "BitcountGridDouble", sans-serif;
+    color: purple;
+    font-size: 4em;
+    margin-top: 2em;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    text-shadow: #fff 2px 2px 4px;
+  }
+  form {
+    gap: 15px;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+  }
+  input {
+    background-color: #383838;
+    border: 5px solid none;
+    border-top-width: 1.7em;
+    margin: 0;
+    padding: 0;
+    color: #383838;
+    word-wrap: break-word;
+    outline: 3px solid #383838;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    transition: all 1s;
+    max-width: 190px;
+    font-weight: bold;
+    font-family: 'Arvo', Courier, monospace;
+    border-radius: 8px ;
+  }
+  input:hover {
+    border-top-width: 0.2em;
+    background-color: #f1e8e8;
+  }
+  input:focus {
+    border-top-width: 0.2em;
+    background-color: #f1e8e8;
+  }
 }
 li {
-  margin-top: 2em;
-  font-family: "Lora-i", sans-serif;
-  font-size: 20px;
-  display: flex;
-  color: blueviolet;
-  justify-content: space-between;
+  width: auto;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
-body input {
-  border-radius: 20px;
-  padding: 10px;
-}
-
 .background-video {
   position: fixed;
   width: 100%;
