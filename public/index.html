@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>User Management</title>
   </head>
   <body>
@@ -10,29 +13,8 @@
       <button type="submit">Create</button>
     </form>
     <ul id="userList"></ul>
-    <script>
-      document
-        .getElementById("userForm")
-        .addEventListener("submit", async (e) => {
-          e.preventDefault();
-          let name = document.getElementById("name").value;
-          let response = await fetch("/api/users", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ id: Date.now(), name }),
-          });
-          let data = await response.json();
-          alert(data.message);
-          location.reload();
-        });
-      async function fetchUsers() {
-        let response = await fetch("/api/users");
-        let users = await response.json();
-        document.getElementById("userList").innerHTML = users
-          .map((u) => `<li>${u.name}</li>`)
-          .join("");
-      }
-      fetchUsers();
-    </script>
+    <script src="./js/script.js"></script>
+    <video autoplay muted loop playsinline class="background-video">
+    <source src="./assets/vid/cherry.mp4" type="video/mp4">
   </body>
 </html>
