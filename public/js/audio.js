@@ -22,7 +22,6 @@ class SoundManager {
     enableAudioOnUserInteraction() {
         const enableAudio = () => {
             if (!this.audioEnabled) {
-                // Play and immediately pause to unlock audio
                 this.deleteSound.play().then(() => {
                     this.deleteSound.pause();
                     this.deleteSound.currentTime = 0;
@@ -41,7 +40,6 @@ class SoundManager {
                 this.audioEnabled = true;
                 console.log('Audio enabled');
                 
-                // Remove listeners after first interaction
                 document.removeEventListener('click', enableAudio);
                 document.removeEventListener('keydown', enableAudio);
             }

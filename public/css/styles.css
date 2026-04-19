@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "Lora-i";
-  src: url(../assets/fonts/Lora/Lora-Italic.ttf);
+  src: url(../assets/fonts/Lora/Lora-Italic-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: "BitcountGridDouble";
@@ -15,33 +15,45 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+:root {
+  --wan: #1e0057;
+  --to: #2a005d;
+  --tre: #360089;
+  --por: #4200a2;
+  --payb: #5000c0;
+  --sx: #5400cf;
+  --svn: #ac86da;
+  --et: #c5aee3;
+  --nay: #a15b9e;
+  --text: #ecdff6;
+}
 body {
   background-color: #ffc0cb;
   h2 {
     font-family: "BitcountGridDouble", sans-serif;
-    color: purple;
+    color: var(--to);
     font-size: 4em;
     margin-top: 2em;
     text-align: center;
     backdrop-filter: blur(10px);
-    text-shadow: #fff 2px 2px 4px;
+    text-shadow: var(--et) 2px 2px 4px;
   }
   form {
     gap: 15px;
     margin-top: 2em;
+    margin-bottom: 2em;
     display: flex;
     justify-content: center;
   }
   input {
-    background-color: #383838;
+    background-color: var(--to);
     border: 5px solid none;
     border-top-width: 1.7em;
     margin: 0;
     padding: 0;
-    color: #383838;
+    color: var(--text);
     word-wrap: break-word;
-    outline: 3px solid #383838;
+    outline: 3px solid var(--tre);
     height: 30px;
     font-size: 17px;
     text-align: center;
@@ -53,22 +65,21 @@ body {
   }
   input:hover {
     border-top-width: 0.2em;
-    background-color: #f1e8e8;
+    cursor: url(../assets/img/input.png), pointer;
+    background-color: var(--payb);
   }
   input:focus {
     border-top-width: 0.2em;
-    background-color: #f1e8e8;
+    background-color: var(--payb);
   }
 }
 li {
   width: auto;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 70px;
   padding: 5px 10px;
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 var(--nay);
 }
 .background-video {
   position: fixed;
@@ -85,4 +96,41 @@ li {
   transform: translate(-50%, -50%);
   object-fit: cover;
   filter: brightness(20%);
+}
+
+@media (max-width: 480px) {
+  body{
+    h2{
+      font-size: 3em;
+    }
+    form{
+      font-size: 1em;
+    }
+    li{
+      font-size: 10px;
+      padding: 10px;
+      button{
+        width: 45px;
+        font-size: 8px;
+      }
+    }
+  }
+}
+@media (max-width: 720px) {
+  body{
+    h2{
+      font-size: 4em;
+    }
+    form{
+      font-size: 3em;
+    }
+    li{
+      font-size: 1em;
+      padding: 1em;
+      button{
+        width: 50px;
+        font-size: 16px;
+      }
+    }
+  }
 }
