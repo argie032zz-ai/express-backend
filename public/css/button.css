@@ -1,25 +1,25 @@
-form .create{
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: var(--text);
-    transition: all 1000ms;
-    font-size: 15px;
-    position: relative;
-    overflow: hidden;
-    outline: 2px solid var(--wan);
-    background-color: var(--to);
+form .create {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--text);
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid var(--wan);
+  background-color: var(--to);
 }
 .create:hover {
-    cursor: url(../assets/img/create.png), pointer;
-    color: var(--wan);
-    transform: scale(1.1);
-    outline: 2px solid var(--svn);
-    box-shadow: 4px 5px 17px -4px var(--tre);
+  cursor: url(../assets/img/create.png), pointer;
+  color: var(--wan);
+  transform: scale(1.1);
+  outline: 2px solid var(--svn);
+  box-shadow: 4px 5px 17px -4px var(--tre);
 }
 .create::before {
   content: "";
@@ -49,7 +49,7 @@ li {
   align-items: center;
   list-style: none;
   padding: 0 1em;
-  button{
+  button {
     width: 75px;
     padding: 0;
     border: none;
@@ -73,44 +73,48 @@ li {
   }
 }
 .btn-delete:hover {
-    cursor: url(../assets/img/trash.png), pointer;
-    animation: shake3856 0.3s linear infinite both;
+  cursor: url(../assets/img/trash.png), pointer;
+  background-color: red;
+  animation: shake3856 0.3s linear infinite both;
 }
 
 @keyframes shake3856 {
- 0%, 100% {
-  -webkit-transform: translate(0);
-  transform: translate(0);
- }
+  0%,
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
 
- 20% {
-  -webkit-transform: translate(-2px, 2px);
-  transform: translate(-2px, 2px);
- }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
 
- 40% {
-  -webkit-transform: translate(-2px, -2px);
-  transform: translate(-2px, -2px);
- }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
 
- 60% {
-  -webkit-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
- }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
 
- 80% {
-  -webkit-transform: translate(2px, -2px);
-  transform: translate(2px, -2px);
- }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
 }
 
 .btn-edit:hover {
-    cursor: url(../assets/img/user-edit.png), pointer;
-    animation: jello-horizontal 0.9s both;
+  cursor: url(../assets/img/user-edit.png), pointer;
+  background-color: green;
+  animation: jello-horizontal 0.9s both;
 }
 
 @keyframes jello-horizontal {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale3d(1, 1, 1);
   }
 

@@ -14,6 +14,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: url(../assets/img/as.png), pointer;
 }
 :root {
   --wan: #1e0057;
@@ -27,6 +28,7 @@
   --nay: #a15b9e;
   --text: #ecdff6;
 }
+
 body {
   background-color: #ffc0cb;
   h2 {
@@ -60,8 +62,8 @@ body {
     transition: all 1s;
     max-width: 190px;
     font-weight: bold;
-    font-family: 'Arvo', Courier, monospace;
-    border-radius: 8px ;
+    font-family: "Arvo", Courier, monospace;
+    border-radius: 8px;
   }
   input:hover {
     border-top-width: 0.2em;
@@ -99,17 +101,17 @@ li {
 }
 
 @media (max-width: 480px) {
-  body{
-    h2{
+  body {
+    h2 {
       font-size: 3em;
     }
-    form{
+    form {
       font-size: 1em;
     }
-    li{
+    li {
       font-size: 10px;
       padding: 10px;
-      button{
+      button {
         width: 45px;
         font-size: 8px;
       }
@@ -117,17 +119,17 @@ li {
   }
 }
 @media (max-width: 720px) {
-  body{
-    h2{
+  body {
+    h2 {
       font-size: 4em;
     }
-    form{
+    form {
       font-size: 3em;
     }
-    li{
+    li {
       font-size: 1em;
       padding: 1em;
-      button{
+      button {
         width: 50px;
         font-size: 16px;
       }
